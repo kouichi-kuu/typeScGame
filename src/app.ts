@@ -1,4 +1,3 @@
-import Screen from "./class/screen";
+import Keyboard from "./class/keyboat.js";
 
-console.log(Screen.width);
-console.log(Screen.height);
+new Keyboard();
