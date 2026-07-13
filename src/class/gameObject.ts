@@ -38,4 +38,13 @@ export default class GameObject {
 
         document.body.appendChild(this._element);
     }
+
+    draw(): void {
+        const left = (this.position.x - this.size.x / 2).toString() + "px";
+        const bottom = (this.position.y - this.size.y / 2).toString() + "px";
+        this.element.style.position = "fixed";
+        this.element.style.left = left;
+        this.element.style.bottom = bottom;
+        this.element.style.opacity = "1";
+    }
 }
