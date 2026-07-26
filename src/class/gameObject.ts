@@ -4,7 +4,7 @@ export default class GameObject {
   protected readonly _element: HTMLElement;
   protected readonly _size: Size;
   protected _position: Point2D;
-  protected readonly _timerId: number;
+  protected readonly _timerId: ReturnType<typeof setInterval>;
 
   get element(): HTMLElement {
     return this._element;

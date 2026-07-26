@@ -1,13 +1,24 @@
-import GameObject from "./class/gameObject.js";
-import { GameObjectParams } from "./utility/type.js";
+import MovableObject from "./class/movableObject.js";
+import { Util } from "./utility/util.js";
 
-const element = document.createElement("img");
-element.setAttribute("src", "./assets/images/player.png");
+const shot1 = new MovableObject({
+  element: Util.createElement({
+    name: "img",
+    attr: { src: "./assets/images/shot.png" },
+  }),
+  position: { x: 50, y: -32 },
+  size: { x: 20, y: 65 },
+  velocity: { x: 0, y: 5 },
+  acceleration: { x: 0, y: 2 },
+});
 
-const params: GameObjectParams = {
-  element: element,
-  position: { x: 200, y: 200 },
-  size: { x: 100, y: 90 },
-};
-
-const obj = new GameObject(params);
+const shot2 = new MovableObject({
+  element: Util.createElement({
+    name: "img",
+    attr: { src: "./assets/images/shot.png" },
+  }),
+  position: { x: 90, y: -32 },
+  size: { x: 20, y: 65 },
+  velocity: { x: 0, y: 5 },
+  acceleration: { x: 0, y: 2 },
+});
