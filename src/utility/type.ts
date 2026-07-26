@@ -12,10 +12,10 @@ export type TextObjectParams = {
   position: Point2D;
   fontName: string;
   fontSize: number;
-  text: string;
+  text?: string;
 };
 
-export type ScoreParams = TextObjectParams & {
+export type ScoreParams = Omit<TextObjectParams, "text"> & {
   score: number;
 };
 
